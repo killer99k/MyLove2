@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>MyLove</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #A571A5; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #8B4E82; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #EBBFC4; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #F38596; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+
+  .tablink:hover {
+    a as}
+
+  /* Style the tab content */
+  .tabcontent {
+    color: #ffffff;
+    display: none;
+    padding: 50px;
+    text-align: center;
+  }
+
+  #London {background-color:red;}
+  #Paris {background-color:#77036E;}
+  #Tokyo {background-color:#9700C3 ;}
+  #Oslo {background-color:purple;}
+
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+  </style>
+  
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Me</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">WHO</a></li>
+        <li><a href="#">WHAT</a></li>
+        <li><a href="#">WHERE</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">Eu te amo sabia?</h3>
+  <img src="img/user.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <h3>Se não sabia agora está sabendo</h3>
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">Por que eu te amo?</h3>
+  <p>Simplismente porque você é a mulher mais linda, mais incrivel, mais inteligente, meiga e gostosa do universo :3</p><br>
+  <p>Você é a mulher mais incrivel que existe, você é tão bela quanto a lua, e tem um sorriso tão tão contagiante que consegue melhorar meu dia, e nem preciso falar do quão gostosa você é, porque amor tua gostosura é maior do que a inflação no Brasil!!!</p>
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">Como já diz na musica A Cera</h3>
+  <p>"Um rosto lindo e um sorriso encantador E um jeitinho de falar que me pirou, que me pirou o cabeção"</p><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Como já descrito abaixo você merece todo o amor do mund- não do universo!!!.</p>
+      <img src="img/1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Defintivamente amor, eu amo te ver sorrir.</p>
+      <img src="img/3 (2).jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Eu sou o homem mais apaixonado do universo meu amor,
+      I Love You S2</p>
+      <img src="img/3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="container1">
+      <p>Basta da uns click nos botões para interagir</p>
+    
+      <div id="London" class="tabcontent">
+        <h1>Meu Amor</h1>
+        <p>Eu programei essa pagina para falar o quanto eu te amo S2.</p>
+        <p>E por tocar no assunto você é minha vida inteirinha, meu amor por você parece a inflação do Real, só aumenta!</p>
+      </div>
+      
+      <div id="Paris" class="tabcontent">
+        <h1>Pudinzinho</h1>
+        <p>Você é o pudim mais doce que existe e apenas você pode adoçar a minha vida. Eu realmente te amo do tamanho do univeso, amo mais do que isso mas essa é a maior coisa que pode descrever(ainda não conheço nada que seja infinito)</p> 
+      </div>
+      
+      <div id="Tokyo" class="tabcontent">
+        <h1>Deusa</h1>
+        <p>Você é tão linda como uma deusa (eu me tornaria seu sudito leal se você me pedisse). Eu posso dizer com o maior orgulho do mundo que você é a mulher mais linda do universo, NÃO QUERO TE PERDER NUNCA!!!!!</p>
+      </div>
+      
+      <div id="Oslo" class="tabcontent">
+        <h1><p id="demo"></p></h1>
+        <p>Faltam só isso para que se complete o nosso 3° ano de relacionamento, 3 anos da qual você disse sim pra esse bestão por isso eu pergunto...</p><br.
+          <p>Você vai renovar o contrato?</p>	 
+          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sim</button>
+          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Yes</button>
+      </div>
+      <div id="id01" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="img/giphy.gif" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Contrato renovado com sucesso!</b></label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Fechar</button>
+          </div>
+        </form>
+        <script>
+          // Get the modal
+          var modal = document.getElementById('id01');
+          
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+          </script>
+          
+      </div>
+      
+      <button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">Meu amor</button>
+      <button class="tablink" onclick="openCity('Paris', this, 'green')">My candy</button>
+      <button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Bealtifull</button>
+      <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Countdown</button>
+      
+      <script>
+      function openCity(cityName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(cityName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+      
+      }
+      // Set the date we're counting down to
+      var countDownDate = new Date("30, Sep, 2022 15:37:25").getTime();
+      
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+      
+        // Get today's date and time
+        var now = new Date().getTime();
+          
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+          
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+          
+        // If the count down is over, write some text 
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+      </script>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Do amor da sua vida <a href="https://br.linkedin.com/in/yan-paulo-9935641a3">Yan Paulo</a></p> 
+</footer>
+
+</body>
+</html>
